@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+void print_array(int *a, int n);
+
 int
 get_frequency(int *a, int n, int key)
 {
@@ -104,9 +107,19 @@ sort_set(int *a, int n)
 	build_max_heap(a, i);
 	swap(a[i], a[0]);
     }
+
+    printf("SORTED ARRAY : \n");
+    print_array(a, n);
     return 0;
 }
 
+void
+print_array(int *a, int n)
+{
+    for(int i=0; i<n; i++)
+	printf("%d ", a[i]);
+    printf("\n");
+}
 
 static int m;
 int **
@@ -115,6 +128,9 @@ get_intersection(int **a, int num_sets, int *size)
     int i=0, j=0;
     int k, count, minset, minsize;
     int **tmp;
+
+    minset = 0;
+    minsize = size[0];
 
     for(i=0; i<num_sets; i++)
     {
@@ -136,6 +152,8 @@ get_intersection(int **a, int num_sets, int *size)
     k = 0;
     tmp[0][k] = a[minset][0];
 
+    printf("Redundancy processing on minset(%d) ...\n", minset);
+
     for(i=1; i<size[minset]; i++)
     {
 	if(a[minset][i] == a[minset][i-1])
@@ -148,17 +166,26 @@ get_intersection(int **a, int num_sets, int *size)
 	}
     }
     tmp[1][k] = count;
+    for(int z=0; z<size[minset]; z++)
+	printf("%d[%d]   ", tmp[0][z], tmp[1][z]);
+    printf("\n");
 
 
      m=0;
-     for(i=0; i<k; i++)
+     for(i=0; i<=k; i++)
      {
+	 printf("k = %d\n", i);
+	 printf("\nProcessing item : %d\n", tmp[0][i]);
 	 for(j=0; j<num_sets; j++)
 	 {
-	     if( i != j )
+	     printf("Processing set(%d) ...\n", j);
+	     if( minset != j )
 	     {
+		 printf("YES, PROCESS\n");
 
 		count = get_frequency(a[j], size[j], tmp[0][i]);
+		printf("Frequency of %d in set %d = %d\n", tmp[0][i], j, count);
+
 		if(count == 0)
 		    break;
 		else 
@@ -171,7 +198,7 @@ get_intersection(int **a, int num_sets, int *size)
 	}
      }
 
-     return 0;
+     return tmp;
 }
 
 
@@ -198,7 +225,8 @@ main()
     }
 
     tmp = get_intersection(a, n, size);
-    
+   
+    printf("Intersetion of sets : "); 
     for(i=0; i<m; i++)
 	printf("%d[%d]  ", tmp[0][i], tmp[1][i]);
     
