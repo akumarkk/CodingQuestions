@@ -1,7 +1,7 @@
 /* 
  * In a binary tree T, a path P is a non-empty sequence of nodes of tree such that, each consecutive node in the sequence is a subtree of its preceding node. In the example tree, the sequences [9, 8, 2] and [5, 8, 12] are two paths, while [12, 8, 2] is not. The amplitude of path P is the maximum difference among values of nodes on path P. The amplitude of tree T is the maximum amplitude of all paths in T. When the tree is empty, it contains no path, and its amplitude is treated as 0.
  */
-
+// http://codesays.com/2014/solution-to-tree-amplitude/
 
 #include <stdio.h>
 #include <stdlib.h>
