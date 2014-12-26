@@ -190,12 +190,18 @@ get_intersection(int **a, int num_sets, int *size)
 		    break;
 		else 
 		{
-		    tmp[0][m] = tmp[0][i];
-		    tmp[1][m] = (count < tmp[1][i])?count: tmp[1][i];
-		    m++;
+		    if(count < tmp[1][i])
+			tmp[1][i] = count;
 		}
 	     }
 	}
+	 if(j == num_sets)
+	 {
+	    printf("ADDED %d at %d into FINAL LIST\n", tmp[0][i], m);
+	     tmp[0][m] = tmp[0][i];
+	     tmp[1][m] = (count < tmp[1][i])?count: tmp[1][i];
+	     m++;
+	 }
      }
 
      return tmp;
