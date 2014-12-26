@@ -34,5 +34,6 @@ main()
     for(i=0; i<len; i++)
 	printf("%d byte     :   %x\n", i, ch[i]);
 
+    printf("Given number = %x\n", x);
     return 0;
 }
