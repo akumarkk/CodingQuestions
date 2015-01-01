@@ -1,0 +1,60 @@
+lin -
+- HTTP
+- File system
+
+1. Given three color objects arranged randomly in an array, arrange them such that each object is together and their collective color groups are in the correct order. 
+
+2. Basically an implementation of BFS and then was asked to print the tree as it appears with correct new line characters making it appear as a tree and then further was asked to modify the logic such that the nodes are indented to make it look exactly like tree(we see in all the DS books)
+
+3. Basically an implementation of BFS and then was asked to print the tree as it appears with correct new line characters making it appear as a tree and then further was asked to modify the logic such that the nodes are indented to make it look exactly like tree(we see in all the DS books)
+
+4. Given a number n, return a number formed from the same digits of n that is the number right before n. Example: Given 1342, you must return the number 1324.
+
+    Start traversing from back, if any bucket before that is fill that is you encountered an element smaller than it then put that element in current position and place all remaning elements in decreasing order.
+For example say the no is 10987598023
+
+start from 3
+A = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+array after 3 becomes [0, 0, 0, 1, 0,..]
+then when u see 2, you see that no smaller element. Array becomes
+[0, 0, 1, 1, 0,...]
+now when u reach at 0, again no smaller element, so array becomes
+[1, 0, 1, 1, 0, ...]
+Now when u reach 8 the just smaller element is 3
+So, replace 8 with 3 and the array becomes [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0]
+So the number just smaller is 10987593820. O(n)
+
+
+
+
+5. design a method to store really large numbers that exceed 64 bits, and then to write a method that can add two of these numbers. 
+
+6. Anagram question
+
+7. compute the square root of x 
+
+8. Print a binary tree level by level  
+
+9. http://www.geeksforgeeks.org/backttracking-set-4-subset-sum/
+
+10. Given a string write a function which prints all the subsets of the string. Now make the function to return only unique solutions.
+
+For example if they give you "abc"
+you print out
+a
+ab
+abc
+ac
+b
+bc
+c
+
+11. check palindrome, print subsets, multiply numbers in string.
+
+12. Given a library of numbers to corresponding letters (1 = a, 2 = b, 3 = c, etc.) and a string made up of digits, return how many different ways those digits can be translated to letters.
+ex: “1111”: “aaaa” “kaa” “aka” “aak” “kk” => 5 different ways  
+
+
+13. find all valid paranthesis strings of length "2n" given an integer "n".
+
+14. Given two strings representing integer numbers ("123" , "30") return a string representing the sum of the two numbers ("153")   
