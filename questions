@@ -2,6 +2,36 @@ lin -
 - HTTP
 - File system
 
+
+TOP QUESTIONS :
+1. finding a square root
+2. returning subsets of a given array/string
+3. sum of numbers in a string
+4. binary tree into doubly linked list
+5. most frequenctly used words
+6.Level order traversal
+7. common sub-string between two strings
+8. 
+
+- hasCheated(String s1,String s2, int N) that evaluates to true if two strings have a common substring of length N.
+- Write a function that prints out all subsets of a given set of numbers.
+-   Convert a binary tree into a circular doubly linked list. The order of the elements in the linked list have to be the order of elements you get when you do an in order traversal of the binary tree.
+
+- provided a phone number (654-876-0987), return all possible strings that the phone number could represent if 2 -> {A, B, C}, 3 -> {D, E, F}, and so on
+- Suppose we can translate numbers into characters: 1->a, 2->b, ...26->z
+given an integer, for example, 11223, output every translation of the number.
+
+-   finding maximum subarray sum (similar to Kadane's Algorithm) with the constraint that two numbers in the array that form the max sum cannot be next to each other. 
+
+- Write a function in language of your choice that takes in two strings, and returns true if they match. Constraints are as follows: String 1, the text to match to, will be alphabets and digits. String 2, the pattern, will be alphabets, digits, '.' and '*'. '.' means either alphabet or digit will be considered as a "match". "*" means the previous character is repeat 0 or more # of times.
+
+- Determine the 10 most frequent words given a terabyte of strings. 
+- How can one implement a queue with only a stack implementation? 
+- Given a binary tree, which is not necessarily balanced, print the nodes in the tree in a level-wise manner. Also, nodes on the same level should be printed on a single line.
+ - Given N credits cards, determine if more than half of them belong to the same person/owner. All you have is an array of the credit card numbers, and an api call like isSamePerson(num1, num2).   View Answers (6)
+Print tree level by level, with a new line for each 
+
+
 1. Given three color objects arranged randomly in an array, arrange them such that each object is together and their collective color groups are in the correct order. 
 
 2. Basically an implementation of BFS and then was asked to print the tree as it appears with correct new line characters making it appear as a tree and then further was asked to modify the logic such that the nodes are indented to make it look exactly like tree(we see in all the DS books)
