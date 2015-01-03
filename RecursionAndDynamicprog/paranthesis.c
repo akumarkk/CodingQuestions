@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define DEBUG 1
+#define DEBUG 0 
 #define debug(fmt,...)\
     do{\
 	if(DEBUG)\
@@ -9,13 +9,14 @@
     }while(0)
 
 char str[100];
-
+int count;
 void
 print_paranthesis(int open, int close, int n, int pos)
 {
     debug("open = %d	close = %d  pos = %d	par = %s", open, close, pos, str);
     if(close == n)
     {
+	count++;
 	printf("Para	:   %s\n", str);
 	return;
     }
@@ -40,5 +41,6 @@ main()
     scanf("%d", &n);
 
     print_paranthesis(0, 0, n, 0);
+    printf("----Count = %d-----\n", count);
     return 0;
 }
